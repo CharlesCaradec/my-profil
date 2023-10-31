@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+
+<html>
+
+<head>
+    <title>Charles Caradec's profile</title>
+    <meta name="description" content="This is the profile of Charles">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <h1>Charles Caradec / C&C</h1>
+    
+    <!-- Modification de l'image de profil pour ajouter l'événement de clic -->
+    <img id="pdp" src="images/pdp.jpg" alt="Charles Caradec" onclick="togglePlayPause()">
+     <p class="hint-text">Clique sur la photo pour écouter le son</p> <!-- Ajout du texte -->
+
+    <p>Bonjour ! Je m'appelle Charles Caradec, un Breton passionné par la musique et l'entrepreneuriat. Après avoir débuté mes études en école de commerce, j'ai découvert une véritable vocation pour le DJing. Sous le pseudonyme "C&C", j'exprime ma créativité musicale sur SoundCloud, fusionnant des rythmes traditionnels avec des sonorités modernes.</p>
+
+    <a href="https://lewagon.com" target="_blank"> Découvrez Le Wagon  ! </a>
+
+    <div class="content-box">
+        <h2>Disc Jokey</h2>
+        <p>Ma passion pour la musique ne date pas d'hier. En apprenant à mixer de manière autodidacte, j'ai développé un style unique qui s'inspire principalement de la Deep/Afro house. Mon pseudonyme "C&C" est non seulement un reflet de mon identité, mais aussi une invitation à découvrir un univers musical riche et entraînant. Sur SoundCloud, je partage régulièrement mes créations, proposant des setlists pour tous les goûts et toutes les humeurs.</p>
+    </div>
+
+    <div class="content-box">
+        <h2>Entreprenariat</h2>
+        <p>L'entrepreneuriat est pour moi bien plus qu'une simple ambition. C'est une vision, un désir de contribuer positivement à notre société. Mon rêve est de fonder une entreprise spécialisée dans l'événementiel, offrant des expériences inoubliables à ma clientèle. Je suis convaincu que la jeunesse d'aujourd'hui possède l'énergie et la créativité nécessaires pour repenser et dynamiser le secteur.</p>
+    </div>
+
+    <div class="content-box">
+        <h2>Animaux</h2>
+        <p>En dehors de mes activités professionnelles, j'ai un penchant pour le monde animalier. Je suis l'heureux propriétaire d'un adorable Cavalier King Charles de couleur ruby, qui répond au doux nom de Sally. Son charme irrésistible lui a valu une certaine notoriété sur Instagram, où elle compte aujourd'hui plus de 600 abonnés ! Si vous êtes amateur d'adorables boules de poils, n'hésitez pas à suivre ses aventures sur <a href="https://www.instagram.com/sally_crdc/" target="_blank">son compte Instagram</a>.</p>
+    </div>
+
+    <div class="content-box">
+        <h2>Suivez-moi</h2>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/charles.caradec/" target="_blank"><img src="images/facebook.jpg"></a></li>
+            <li><a href="https://www.linkedin.com/in/charles-caradec-6b8989263/" target="_blank"><img src="images/linkedin.png"></a></li>
+            <li><a href="https://www.instagram.com/charles.caradec/" target="_blank"><img src="images/insta.png"></a></li>
+        </ul>
+    </div>
+
+    <div class="audio-player">
+        <audio id="backgroundMusic" loop>
+            <source src="cc-pti.mp3.wav" type="audio/mpeg">
+            Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+        <div class="audio-controls">
+            <button onclick="playMusic()">Play</button>
+            <button onclick="pauseMusic()">Pause</button>
+            <button onclick="decreaseVolume()">-</button> <!-- Bouton pour diminuer le volume -->
+            <button onclick="increaseVolume()">+</button> <!-- Bouton pour augmenter le volume -->
+            <button onclick="toggleVolume()">Mute/Unmute</button>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        const music = document.getElementById("backgroundMusic");
+
+        function togglePlayPause() {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
+        function playMusic() {
+            music.play();
+        }
+
+        function pauseMusic() {
+            music.pause();
+        }
+
+        function toggleVolume() {
+            music.muted = !music.muted;
+        }
+
+        function increaseVolume() {
+            if (music.volume < 1) {
+                music.volume = Math.min(music.volume + 0.1, 1);
+            }
+        }
+
+        function decreaseVolume() {
+            if (music.volume > 0) {
+                music.volume = Math.max(music.volume - 0.1, 0);
+            }
+        }
+    </script>
+
+</body>
+</html>

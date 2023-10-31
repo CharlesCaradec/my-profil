@@ -1,0 +1,122 @@
+body {
+    background-image: url(images/C&C.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    background-position: center;
+    font-size: 18px; /* Augmentation de la taille de la police d'écriture */
+}
+.hint-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+h1 {
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 2.5em; /* Augmentation de la taille de la police pour le h1 */
+    text-decoration: underline; /* Soulignement du h1 */
+}
+
+h2 {
+    color: white;
+    font-weight: bold; /* Gras pour le h2 */
+    font-size: 2em; /* Augmentation de la taille de la police pour le h2 */
+    text-decoration: underline; /* Soulignement du h2 */
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px; /* Augmentation de la taille de la police pour les liens */
+}
+
+img {
+    border: 5px solid white;
+    border-radius: 200px;
+}
+
+#pdp {
+    border: 5px solid white;
+    border-radius: 200px;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.social-links li img {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+}
+
+.content-box h2, 
+.content-box p, 
+.content-box img, 
+.content-box a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* ... Votre code CSS existant ... */
+
+.audio-player {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.audio-controls button {
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.audio-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
